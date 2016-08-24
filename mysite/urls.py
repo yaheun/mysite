@@ -23,4 +23,6 @@ urlpatterns = [
 
     url(r'^$', HomeView.as_view(), name='home'),
     url(r'^blog/', include('blog.urls', namespace='blog')),
+#    url(r'^summernote/', include('django_summernote.urls')),
 ]
+

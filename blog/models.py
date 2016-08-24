@@ -8,6 +8,7 @@ from tagging.fields import TagField    # 추가
 # Create your models here.
 
 @python_2_unicode_compatible
+
 class Post(models.Model):
     title = models.CharField('TITLE', max_length=50)
     slug = models.SlugField('SLUG', unique=True, allow_unicode=True, help_text='one word for title alias.')
@@ -34,3 +35,4 @@ class Post(models.Model):
 
     def get_next_post(self):
         return self.get_next_by_modify_date()
+
